@@ -1,0 +1,27 @@
+import type { ClaimInput } from '../../src/core/dataset/domain/golden-case.js';
+
+export const sampleInput = (overrides: Partial<ClaimInput> = {}): ClaimInput => ({
+  state: 'California',
+  customerLifetimeValue: 3622.69,
+  coverage: 'Basic',
+  education: 'Bachelor',
+  effectiveToDate: '2024-01-01',
+  employmentStatus: 'Employed',
+  gender: 'F',
+  income: 65163,
+  location: 'Urban',
+  maritalStatus: 'Married',
+  monthlyPremium: 93,
+  monthsSinceLastClaim: 4,
+  monthsSincePolicyInception: 107,
+  openComplaints: 3,
+  numberOfPolicies: 1,
+  policyType: 'Corporate Auto',
+  policy: 'Corporate L2',
+  renewOfferType: 3,
+  salesChannel: 'Web',
+  claimAmount: 380.9,
+  vehicleClass: 'Four-Door Car',
+  vehicleSize: 'Medsize',
+  ...overrides,
+});
