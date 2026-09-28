@@ -1,8 +1,6 @@
 # eval-harness-insurance
 
-Harness de regressão para um agente de IA de subscrição de sinistros de seguro auto. Ele envia cada caso do Golden Dataset para a IA, valida o JSON de resposta contra um contrato estrito, aplica regras atuariais e encerra com código de saída próprio para CI/CD.
-
-Especificação de referência: `openspec/specs/prd.md`.
+Harness de regressão para um agente de IA de subscrição de sinistros de seguro auto. Ele envia cada caso do Golden Dataset para a IA, valida o JSON de resposta contra um contrato estrito.
 
 ## Requisitos
 
@@ -69,4 +67,4 @@ npm run typecheck   # tsc --noEmit
 ```
 
 Arquitetura DDD com dois contextos: `dataset`, que carrega o CSV e contém a ACL, e `evaluation`, que contém as regras, os ports e os adapters de IA. `evaluation/domain` não importa `dataset`. A tradução entre os dois acontece só em `evaluation/infrastructure/dataset-case-source.ts`. Só `src/interface/runner.ts` acessa `process`.
-# eval-harness-insurance
+
